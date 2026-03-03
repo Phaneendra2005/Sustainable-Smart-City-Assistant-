@@ -1,109 +1,150 @@
 # Sustainable Smart City Assistant
 
-A full-stack AI-powered Smart City Assistant platform designed to provide intelligent city services through a scalable backend architecture and modular frontend integration.
+A full-stack Smart City Assistant platform designed using a scalable backend architecture and modular frontend integration. The system provides AI-powered city services through secure REST APIs with performance-focused design.
 
 ---
 
-## 🚀 Overview
+## Overview
 
-The system enables users to interact with smart city services such as sustainability recommendations, AI-driven assistance, and real-time information access through secure REST APIs.
+This platform enables users to interact with smart city services through authenticated API endpoints. The application is structured using layered backend principles to ensure maintainability, scalability, and clean separation of concerns.
 
-The platform is built using a layered backend architecture with authentication, modular services, and optimized database interactions.
-
----
-
-## 🏗️ Architecture
-
-The system follows a structured layered architecture:
-
-Backend (Node.js + Express):
-- Controllers → Handle HTTP requests and responses
-- Services → Business logic layer
-- Middleware → Authentication & request validation
-- Models → Database schema definitions
-- Routes → API endpoint definitions
-
-Frontend (React.js):
-- Component-based UI architecture
-- API-driven data rendering
-- State management using hooks
-- Protected routes for authenticated access
-
-Database:
-- MongoDB for persistent storage
-- Indexed collections for optimized query performance
+The system is designed to support concurrent users with optimized request handling and database performance.
 
 ---
 
-## 🔐 Authentication & Security
+## System Architecture
 
-- JWT-based authentication
-- Role-based access control
-- Middleware-level token validation
-- Secure password handling
-- Protected API endpoints
+### Backend (Node.js + Express)
+
+The backend follows a layered architecture:
+
+- Controllers – Handle HTTP requests and responses  
+- Services – Contain core business logic  
+- Middleware – Authentication and request validation  
+- Models – Database schema definitions  
+- Routes – API endpoint definitions  
+
+This separation ensures modularity and easier scalability.
+
+### Frontend (React.js)
+
+- Component-based UI architecture  
+- API-driven data rendering  
+- State management using hooks  
+- Protected routes for authenticated users  
+
+### Database
+
+- MongoDB for persistent storage  
+- Indexed collections to improve query performance  
 
 ---
 
-## 📡 API Design
+## Authentication & Security
 
-RESTful API principles followed:
+- JWT-based authentication  
+- Role-based access control  
+- Middleware-level token verification  
+- Secure password handling  
+- Protected API endpoints  
 
-- `POST /auth/register`
-- `POST /auth/login`
-- `GET /api/services`
-- `POST /api/request`
-- `GET /api/history`
-
-Each endpoint is modular, validated, and secured via middleware.
+The backend is stateless, enabling horizontal scalability.
 
 ---
 
-## ⚙️ Tech Stack
+## REST API Design
 
-Backend:
+The system follows RESTful principles.
+
+Example endpoints:
+
+- POST /auth/register  
+- POST /auth/login  
+- GET /api/services  
+- POST /api/request  
+- GET /api/history  
+
+Each endpoint is validated, modular, and secured using middleware.
+
+---
+
+## Technology Stack
+
+### Backend
 - Node.js
 - Express.js
 - JWT Authentication
 - MongoDB
 
-Frontend:
+### Frontend
 - React.js
 - REST API integration
 
-Tools & Deployment:
+### Tools & Deployment
 - Git
 - AWS (if deployed)
 - Environment-based configuration
 
 ---
 
-## 📈 Performance Considerations
+## Performance & Scalability Considerations
 
-- Modular service separation for maintainability
-- Optimized database queries
-- Stateless backend architecture
-- Efficient request handling under concurrent load
-- Reduced response time to sub-3 seconds during testing
-
----
-
-## 🧠 Engineering Highlights
-
-- Clean separation of concerns
-- Reusable middleware components
-- API-first backend design
-- Secure authentication workflow
-- Scalable architecture suitable for extension
+- Modular service separation for maintainability  
+- Optimized database queries  
+- Stateless backend architecture  
+- Efficient handling of concurrent requests  
+- Achieved sub-3 second response time under testing  
 
 ---
 
-## 🛠️ Local Setup
+## Engineering Highlights
 
-### Backend
+- Clean separation of concerns  
+- Reusable middleware components  
+- API-first backend design  
+- Secure authentication workflow  
+- Scalable structure suitable for future microservices migration  
 
-```bash
-git clone <repo-url>
-cd backend
-npm install
-npm start
+---
+
+## Local Setup Instructions
+
+### Clone Repository
+
+git clone <repository-url>  
+cd Sustainable-Smart-City-Assistant  
+
+### Backend Setup
+
+cd backend  
+npm install  
+npm start  
+
+### Frontend Setup
+
+cd frontend  
+npm install  
+npm start  
+
+Create a .env file in backend directory:
+
+MONGO_URI=your_database_connection  
+JWT_SECRET=your_secret_key  
+
+---
+
+## Future Improvements
+
+- Containerization using Docker  
+- CI/CD pipeline integration  
+- API rate limiting  
+- Caching layer (Redis)  
+- Migration toward microservices architecture  
+
+---
+
+## Author
+
+Phaneendra Kanduri  
+B.Tech Computer Science and Engineering  
+Backend & Platform Engineering Enthusiast  
